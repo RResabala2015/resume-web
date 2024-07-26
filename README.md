@@ -1,4 +1,4 @@
-# Resume Web RRDev template with Vite + Material UI in TypeScript
+# Resume Web RRDev template with React + Vite + Material UI in TypeScript
 
 ## How to use
 

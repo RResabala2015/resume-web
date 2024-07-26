@@ -20,8 +20,8 @@ const logoStyle = {
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
-      {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+      {' © '}
+      <Link href="https://renatoresabala.com/">Renato&nbsp;Resabala&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
   );
@@ -191,7 +191,7 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
+            href="https://github.com/RResabala2015"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
@@ -199,7 +199,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://x.com/MaterialUI"
+            href=""
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
@@ -207,7 +207,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://www.linkedin.com/in/renato-r-611795133/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >
