@@ -13,6 +13,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+    "eslint-plugin-prettier": "^5.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.11",
@@ -29,8 +30,11 @@
     "preview": "vite preview",
     "watch": "vite build --watch",
     "test": "vitest",
-    "dev": "node server",
+    "test:coverage": "jest --silent --watchAll=false --coverage",
+    "dev": "vite --port 3000 --open",
     "build:client": "vite build --outDir dist/client",
+    "format": "prettier --check .",
+    "lint": "eslint --cache .",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.js"
   },
   "eslintConfig": {

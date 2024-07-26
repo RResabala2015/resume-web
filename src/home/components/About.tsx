@@ -40,7 +40,7 @@ const items = [
   },
 ];
 
-export default function Features() {
+export default function About() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
@@ -50,21 +50,24 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
+    <Container id="about-me" sx={{ py: { xs: 8, sm: 16 } }}>
       <Grid container spacing={6}>
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Product features
+              About Me
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the types
-              of features, add-ons, or the benefits of the features.
+              With over 8 years of experience as a Software Engineer, 
+              I'm on a mission to create technology solutions that connect the digital world with real life!
+              I have the power to develop in frontend, backend, which allows me to bring my magic to both
+              revolutionary startups and giant enterprise projects. I'm passionate about writing clean,
+              maintainable code and design with users in mind, thriving in environments that love innovation
+              and continuous professional growth. Let's make technology shine!
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
