@@ -89,14 +89,14 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
             >
               <img
                 src={
-                  "./../../../public/static/images/logo-portfolio.svg"
+                  "/static/images/logo.svg"
                 }
                 style={logoStyle}
                 alt="logo of RRDev"
               />
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
-                  onClick={() => scrollToSection('features')}
+                  onClick={() => scrollToSection('about-me')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
@@ -175,19 +175,21 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                   >
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
-                  <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
+                  <MenuItem onClick={() => scrollToSection('about-me')}>
+                    About
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    Testimonials
+                    Skills
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
+                    Experience
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('pricing')}>
-                    Pricing
+                    References
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
+                  <MenuItem onClick={() => scrollToSection('faq')}>
+                    Contact
+                  </MenuItem>
                   <Divider />
                 </Box>
               </Drawer>

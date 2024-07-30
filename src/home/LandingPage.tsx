@@ -8,11 +8,11 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import MenuAppBar from './components/MenuAppBar';
-import Hero from './components/Hero';
+import Home from './components/Home';
 import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
 import Pricing from './components/Pricing';
-import Features from './components/Features';
+import About from './components/About';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -51,11 +51,6 @@ function ToggleCustomTheme({
           },
         }}
       >
-        <ToggleButton value>
-          <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom theme
-        </ToggleButton>
-        <ToggleButton value={false}>Material Design 2</ToggleButton>
       </ToggleButtonGroup>
     </Box>
   );
@@ -79,10 +74,10 @@ export default function LandingPage() {
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
       <MenuAppBar mode={mode} toggleColorMode={toggleColorMode} />
-      <Hero />
+      <Home />
       <Box sx={{ bgcolor: 'background.default' }}>
-        <LogoCollection />
-        <Features />
+        {/* <LogoCollection /> */}
+        <About />
         <Divider />
         <Testimonials />
         <Divider />
@@ -91,7 +86,6 @@ export default function LandingPage() {
         <Pricing />
         <Divider />
         <FAQ />
-        <Divider />
         <Footer />
       </Box>
       <ToggleCustomTheme
