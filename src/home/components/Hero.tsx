@@ -4,8 +4,10 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import ImageAvatars from './ImageAvatars';
 
-export default function Home() {
+
+export default function Hero() {
   return (
     <Box
       id="hero"
@@ -28,6 +30,7 @@ export default function Home() {
           pb: { xs: 8, sm: 12 },
         }}
       >
+        <ImageAvatars/>
         <Stack spacing={2} useFlexGap sx={{ width: { xs: '100%', sm: '70%' } }}>
           <Typography
             variant="h1"
@@ -55,14 +58,22 @@ export default function Home() {
           <Typography
             textAlign="left"
             color="text.secondary"
-            sx={{ alignSelf: 'left', width: { sm: '100%', md: '100%' } }}
+            sx={{
+              fontSize: 'clamp(1rem, 2vw, 2rem)',
+              alignSelf: 'left',
+              width: { sm: '100%', md: '100%' } 
+            }}
           >
             Hello, I'm Renato Resabala
           </Typography>
           <Typography
             textAlign="left"
             color="text.secondary"
-            sx={{ alignSelf: 'left', width: { sm: '100%', md: '100%' } }}
+            sx={{
+              fontSize: 'clamp(1rem, 2vw, 2rem)',
+              alignSelf: 'left',
+              width: { sm: '100%', md: '100%' } 
+          }}
           >
             I'm a Software Engineer based in Guayaquil, Ecuador with more than 8 years of experience, 
             developing solutions that connect the digital world with real life!

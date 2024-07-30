@@ -2,13 +2,10 @@ import * as React from 'react';
 import { PaletteMode } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import MenuAppBar from './components/MenuAppBar';
-import Home from './components/Home';
+import Hero from './components/Hero';
 import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
 import Pricing from './components/Pricing';
@@ -74,19 +71,15 @@ export default function LandingPage() {
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
       <MenuAppBar mode={mode} toggleColorMode={toggleColorMode} />
-      <Home />
+      <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
         {/* <LogoCollection /> */}
         <About />
-        <Divider />
         <Testimonials />
-        <Divider />
         <Highlights />
-        <Divider />
         <Pricing />
-        <Divider />
         <FAQ />
-        <Footer />
+        <Footer /> 
       </Box>
       <ToggleCustomTheme
         showCustomTheme={showCustomTheme}

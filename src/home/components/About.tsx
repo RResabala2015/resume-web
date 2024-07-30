@@ -15,26 +15,23 @@ import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
+    title: 'Full Name: ',
     description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
+      'Renato Simon Resabala Vera',
     imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
+    title: 'Address: ',
     description:
-      'This item could provide information about the mobile app version of the product.',
+      'Guayaquil, Ecuador',
     imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
+    title: 'Email',
     description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+      'renatoresabala@gmail.com',
     imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
   },
@@ -55,19 +52,7 @@ export default function About() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              About Me
-            </Typography>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              sx={{ mb: { xs: 2, sm: 4 } }}
-            >
-              With over 8 years of experience as a Software Engineer, 
-              I'm on a mission to create technology solutions that connect the digital world with real life!
-              I have the power to develop in frontend, backend, which allows me to bring my magic to both
-              revolutionary startups and giant enterprise projects. I'm passionate about writing clean,
-              maintainable code and design with users in mind, thriving in environments that love innovation
-              and continuous professional growth. Let's make technology shine!
+              Personal information
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
@@ -123,23 +108,6 @@ export default function About() {
               <Typography color="text.secondary" variant="body2" sx={{ my: 0.5 }}>
                 {selectedFeature.description}
               </Typography>
-              <Link
-                color="primary"
-                variant="body2"
-                fontWeight="bold"
-                sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  '& > svg': { transition: '0.2s' },
-                  '&:hover > svg': { transform: 'translateX(2px)' },
-                }}
-              >
-                <span>Learn more</span>
-                <ChevronRightRoundedIcon
-                  fontSize="small"
-                  sx={{ mt: '1px', ml: '2px' }}
-                />
-              </Link>
             </Box>
           </Box>
           <Stack
@@ -183,26 +151,9 @@ export default function About() {
                     gap: 2.5,
                   }}
                 >
-                  <Box
-                    sx={{
-                      color: (theme) => {
-                        if (theme.palette.mode === 'light') {
-                          return selectedItemIndex === index
-                            ? 'primary.main'
-                            : 'grey.300';
-                        }
-                        return selectedItemIndex === index
-                          ? 'primary.main'
-                          : 'grey.700';
-                      },
-                    }}
-                  >
-                    {icon}
-                  </Box>
                   <Box sx={{ textTransform: 'none' }}>
                     <Typography
-                      color="text.primary"
-                      variant="body2"
+                      variant="subtitle1"
                       fontWeight="bold"
                     >
                       {title}
@@ -214,26 +165,6 @@ export default function About() {
                     >
                       {description}
                     </Typography>
-                    <Link
-                      color="primary"
-                      variant="body2"
-                      fontWeight="bold"
-                      sx={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        '& > svg': { transition: '0.2s' },
-                        '&:hover > svg': { transform: 'translateX(2px)' },
-                      }}
-                      onClick={(event) => {
-                        event.stopPropagation();
-                      }}
-                    >
-                      <span>Learn more</span>
-                      <ChevronRightRoundedIcon
-                        fontSize="small"
-                        sx={{ mt: '1px', ml: '2px' }}
-                      />
-                    </Link>
                   </Box>
                 </Box>
               </Card>

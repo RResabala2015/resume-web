@@ -5,15 +5,20 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
+import PersonIcon from '@mui/icons-material/Person';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import StarIcon from '@mui/icons-material/Star';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import ComputerIcon from '@mui/icons-material/Computer';
+import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 
 const logoStyle = {
-  width: '140px',
+  width: '120px',
   height: 'auto',
   cursor: 'pointer',
 };
@@ -95,19 +100,27 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                 alt="logo of RRDev"
               />
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <MenuItem
+                  onClick={() => scrollToSection('hero')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="h6" color="text.primary">
+                    About
+                  </Typography>
+                </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('about-me')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
-                    About
+                  <Typography variant="h6" color="text.primary">
+                    Personal Information
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('testimonials')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="h6" color="text.primary">
                     Skills
                   </Typography>
                 </MenuItem>
@@ -115,7 +128,7 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                   onClick={() => scrollToSection('highlights')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="h6" color="text.primary">
                     Experience
                   </Typography>
                 </MenuItem>
@@ -123,7 +136,7 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                   onClick={() => scrollToSection('pricing')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="h6" color="text.primary">
                     References
                   </Typography>
                 </MenuItem>
@@ -131,7 +144,7 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                   onClick={() => scrollToSection('faq')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="h6" color="text.primary">
                     Contact
                   </Typography>
                 </MenuItem>
@@ -156,7 +169,7 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
               >
                 <MenuIcon />
               </Button>
-              <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+              <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
                 <Box
                   sx={{
                     minWidth: '60dvw',
@@ -165,32 +178,58 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                     flexGrow: 1,
                   }}
                 >
-                  <Box
+                <Box
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'end',
                       flexGrow: 1,
                     }}
-                  >
+                >
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-                  </Box>
-                  <MenuItem onClick={() => scrollToSection('about-me')}>
+                </Box>
+                <MenuItem
+                  onClick={() => scrollToSection('hero')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                    <PersonIcon/>
                     About
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('testimonials')}>
+                </MenuItem>    
+                <MenuItem 
+                    onClick={() => scrollToSection('about-me')}
+                    sx={{ py: '6px', px: '12px' }}
+                >
+                    <AccountBoxIcon/>
+                    Personal Information
+                </MenuItem>
+                <MenuItem 
+                    onClick={() => scrollToSection('testimonials')}
+                    sx={{ py: '6px', px: '12px' }}
+                >
+                    <StarIcon/>
                     Skills
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('highlights')}>
+                </MenuItem>
+                <MenuItem 
+                    onClick={() => scrollToSection('highlights')}
+                    sx={{ py: '6px', px: '12px' }}
+                >
+                    <BusinessCenterIcon/>
                     Experience
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('pricing')}>
+                </MenuItem>
+                <MenuItem 
+                    onClick={() => scrollToSection('pricing')}
+                    sx={{ py: '6px', px: '12px' }}
+                >
+                    <ComputerIcon />
                     References
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('faq')}>
+                </MenuItem>
+                <MenuItem 
+                    onClick={() => scrollToSection('faq')}
+                    sx={{ py: '6px', px: '12px' }}
+                >
+                    <MarkEmailUnreadIcon/>
                     Contact
-                  </MenuItem>
-                  <Divider />
+                </MenuItem>
                 </Box>
               </Drawer>
             </Box>
