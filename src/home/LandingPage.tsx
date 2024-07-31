@@ -6,14 +6,13 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import MenuAppBar from './components/MenuAppBar';
 import Hero from './components/Hero';
-import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
 import Pricing from './components/Pricing';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './components/getLPTheme';
+import Contact from './pages/Contact';
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;
@@ -73,12 +72,11 @@ export default function LandingPage() {
       <MenuAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
-        {/* <LogoCollection /> */}
         <About />
         <Testimonials />
         <Highlights />
         <Pricing />
-        <FAQ />
+        <Contact />
         <Footer /> 
       </Box>
       <ToggleCustomTheme

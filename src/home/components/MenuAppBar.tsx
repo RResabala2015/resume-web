@@ -141,7 +141,7 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('faq')}
+                  onClick={() => scrollToSection('contact')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="h6" color="text.primary">
@@ -224,7 +224,7 @@ function MenuAppBar({ mode, toggleColorMode }: MenuAppBarProps) {
                     References
                 </MenuItem>
                 <MenuItem 
-                    onClick={() => scrollToSection('faq')}
+                    onClick={() => scrollToSection('contact')}
                     sx={{ py: '6px', px: '12px' }}
                 >
                     <MarkEmailUnreadIcon/>
